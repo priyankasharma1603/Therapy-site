@@ -1,0 +1,103 @@
+/* =========================================
+   MY SPECIALTIES SECTION STYLES
+   ========================================= */
+
+/* --- Section Container Layout --- */
+.specialties-section {
+    /* Full width with theme background and centered alignment */
+    @apply w-full bg-[#f8f3ed] px-[3.75vw] flex flex-col items-center;
+
+    /* 
+       Responsive Padding: 
+       Vertical spacing adapts for mobile readability.
+    */
+    @apply py-[60px] md:py-24 mb-4;
+}
+
+/* --- Section Header Typography --- */
+.specialties-title {
+    /* Primary header styles: centered font with specific leading */
+    @apply font-gopher text-[#1c3b23] leading-tight mb-16 text-center font-medium;
+
+    /* 
+       Scale font size for mobile vs desktop:
+       - 38px on small devices
+       - 52px on medium and up
+    */
+    @apply text-[38px] md:text-[52px];
+}
+
+/* --- Interactive Card Grid System --- */
+.specialties-grid {
+    /* 
+       Grid behavior:
+       - 1 column on mobile (full width stacking)
+       - 3 columns on desktop (md breakpoint)
+       - Consistent 24px gap between items
+    */
+    @apply w-full max-w-[1400px] gap-6 grid grid-cols-1 md:grid-cols-3;
+}
+
+/* --- Modular Specialty Card --- */
+.specialty-card {
+    /* 
+       Card Aesthetics:
+       - Subtle background contrast.
+       - Defined border line.
+       - Flex column layout to push image to the bottom.
+       - Minimum height for consistent grid look.
+    */
+    @apply bg-[#e5e0da] border border-[#1c3b23] p-5 flex flex-col h-full min-h-[500px] relative;
+}
+
+.specialty-card-title {
+    /* Hierarchical text styling for card heading */
+    @apply font-gopher text-[#1c3b23] text-[20px] font-medium mb-7;
+}
+
+.specialty-card-text {
+    /* Body text with optimal line-height for readability */
+    @apply font-gopher text-[#1c3b23] text-[14px] leading-[1.6] mb-10;
+}
+
+/* --- Card Visual Component (Image) --- */
+.specialty-image-wrapper {
+    /* 
+       Circle crop effect:
+       - Relative positioning for internal Next.js image.
+       - Overflow hidden for Rounded-full.
+       - Pushed to bottom via mt-auto.
+    */
+    @apply relative rounded-full overflow-hidden mx-auto mt-auto;
+
+    /* Mobile: 250px, Desktop: 311px */
+    @apply w-[250px] h-[250px] md:w-[311px] md:h-[311px];
+}
+
+.specialty-image {
+    /* Ensure image content covers the circular frame */
+    @apply object-cover w-full h-full;
+}
+
+/* --- TABLET SPECIFIC TWEAKS --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .specialties-container {
+        @apply px-6;
+    }
+
+    .specialties-grid {
+        @apply grid-cols-3 gap-4;
+    }
+
+    .specialty-card {
+        @apply min-h-[400px] px-4;
+    }
+
+    .specialties-title {
+        @apply text-[36px];
+    }
+
+    .specialty-image-wrapper {
+        @apply w-[220px] h-[220px];
+    }
+}

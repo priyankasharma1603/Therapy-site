@@ -1,0 +1,174 @@
+/* =========================================
+   FAQ SECTION STYLES
+   ========================================= */
+
+.faq-section-container {
+    @apply w-full bg-[#f8f3ed] py-20 px-6 md:px-20 flex flex-col md:flex-row items-center gap-10 font-gopher;
+}
+
+.faq-image-container {
+    @apply w-full md:w-1/2 flex justify-center mb-0 md:mb-0;
+}
+
+.faq-image-wrapper {
+    @apply overflow-hidden rounded-t-full w-[132px] h-[198px] md:w-[461px] md:h-[691px];
+}
+
+.faq-image {
+    @apply object-cover w-full h-full;
+}
+
+.faq-content-side {
+    @apply w-full md:w-1/2 text-[#1c3b23] text-center md:text-left;
+}
+
+.faq-title {
+    @apply text-[40px] md:text-[52px] font-gopher font-medium mb-5 text-left md:mb-14;
+}
+
+.faq-accordion-item {
+    @apply border-t border-[#1c3b23];
+}
+
+.faq-accordion-item-last {
+    @apply border-b;
+}
+
+.faq-accordion-button {
+    @apply w-full flex items-center gap-6 text-left focus:outline-none py-4;
+}
+
+.faq-accordion-icon {
+    @apply text-[43px] font-light w-8 flex-shrink-0 transition-transform duration-300;
+}
+
+.faq-accordion-question {
+    @apply text-3xl md:text-[43px] font-gopher font-medium;
+}
+
+.faq-accordion-content {
+    @apply overflow-hidden;
+}
+
+.faq-accordion-answer {
+    @apply ml-14 mt-2 mb-6 text-lg md:text-xl;
+}
+
+/* --- PROFESSIONAL BACKGROUND SECTION --- */
+
+.background-section {
+    @apply w-full bg-[#e5e0da] pb-[100px] md:pb-24 px-6 md:px-20 pt-[100px] md:pt-20 flex flex-col items-center font-gopher;
+}
+
+.background-container {
+    @apply max-w-[700px] w-full text-[#1c3b23];
+}
+
+.background-title {
+    @apply text-[31px] md:text-[43px] font-gopher font-medium mb-12 text-center leading-tight;
+}
+
+.background-accordion-item {
+    @apply border-t border-[#1c3b23];
+}
+
+.background-accordion-item-last {
+    @apply border-b;
+}
+
+.background-accordion-button {
+    @apply w-full flex items-center justify-between text-left focus:outline-none py-2 md:py-4;
+}
+
+.background-accordion-title {
+    @apply text-[21px] md:text-[25px] font-medium;
+}
+
+.background-accordion-icon {
+    @apply text-[25px] font-light flex-shrink-0 text-right;
+}
+
+.background-accordion-content {
+    @apply overflow-hidden;
+}
+
+.background-accordion-text {
+    @apply mt-1 mb-8 md:ml-[100px] md:mr-[100px] text-lg md:text-xl md:w-[70%];
+}
+
+/* --- GET STARTED CTA SECTION --- */
+
+.cta-section {
+    @apply w-full bg-[#7e7b46] py-28 px-6 md:px-20 flex flex-col items-center text-center text-white font-gopher;
+}
+
+.cta-container {
+    @apply max-w-[800px] w-full;
+}
+
+.cta-title {
+    @apply text-[31px] md:text-[43px] font-gopher font-medium mb-8 leading-tight;
+}
+
+.cta-text {
+    @apply text-[18px] md:text-[20px] leading-[1.6] mb-12 opacity-95 font-light;
+}
+
+.cta-button-wrapper {
+    @apply flex justify-center mt-[90px];
+}
+
+.cta-button {
+    @apply border border-white text-white px-[28px] py-[11px] text-[14px] font-medium tracking-wide hover:bg-white hover:text-[#82835c] transition-all duration-300;
+}
+
+/* --- TABLET SPECIFIC TWEAKS --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .faq-section-container {
+        @apply gap-6 px-10 py-[220px];
+    }
+
+    .faq-image-wrapper {
+        @apply w-[308px] h-[462px];
+    }
+
+    .faq-accordion-question {
+        @apply text-[32px];
+    }
+
+    .background-section {
+        @apply px-10 py-[200px];
+    }
+
+    .background-accordion-item {
+        @apply w-[50%] mx-auto;
+    }
+
+    .faq-title {
+        @apply mb-[30px] text-[40px];
+    }
+
+    .background-accordion-title {
+        @apply text-[22px];
+    }
+
+    .background-title {
+        @apply text-[34px];
+    }
+
+    .background-accordion-text {
+        @apply md:w-[85%] text-[18px];
+    }
+
+    .cta-section {
+        @apply px-10 py-[150px];
+    }
+
+    .cta-title {
+        @apply text-[36px];
+    }
+
+    .cta-text {
+        @apply text-[18px];
+    }
+}

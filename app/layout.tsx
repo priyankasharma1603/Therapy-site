@@ -1,15 +1,26 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const gopher = localFont({
+  src: [
+    {
+      path: "../public/assets/fonts/fonnts.com-Gopher_Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/fonnts.com-Gopher_Medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/assets/fonts/fonnts.com-Gopher_Bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-gopher",
 });
 
 export const metadata: Metadata = {
@@ -25,7 +36,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${gopher.variable} font-gopher antialiased`}
+        suppressHydrationWarning={true}
       >
         {children}
       </body>

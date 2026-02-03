@@ -1,0 +1,86 @@
+/* =========================================
+   NAVBAR STYLES
+   ========================================= */
+
+/* --- Primary Navigation Container --- */
+.nav-container {
+   @apply w-full fixed top-0 z-50;
+   @apply flex justify-between items-center gap-[50px];
+   @apply pt-[14px] pb-[20px] px-[23px] md:px-[3.75vw] bg-[#f8f3ed] transition-transform duration-300 ease-in-out;
+}
+
+.nav-logo-container {
+   @apply md:ml-0 ml-auto md:mr-0;
+}
+
+.nav-logo {
+   @apply w-[126px] h-[21px] md:w-auto md:h-10 object-contain;
+}
+
+/* --- Hamburger Button --- */
+.nav-hamburger {
+   @apply md:hidden text-[#1c3b23] focus:outline-none;
+}
+
+.nav-hamburger-icon {
+   @apply w-10 h-10;
+}
+
+/* --- Navigation Links Area --- */
+.nav-links {
+   @apply hidden md:flex gap-[45px] text-[#1c3b23] text-base font-gopher;
+}
+
+.nav-link {
+   @apply text-[#1c3b23] font-gopher text-[20px] tracking-[-0.2px] hover:opacity-70 transition-opacity;
+}
+
+/* --- Mobile Menu Overlay --- */
+.mobile-menu-overlay {
+   @apply fixed inset-0 bg-[#f8f3ed] z-[100] flex flex-col p-6;
+}
+
+.mobile-menu-header {
+   @apply flex justify-between items-center;
+}
+
+.mobile-menu-close {
+   @apply text-[#1c3b23];
+}
+
+.mobile-menu-close-icon {
+   @apply w-10 h-10;
+}
+
+.mobile-menu-logo-wrapper {
+   @apply w-32 h-8 relative;
+}
+
+.mobile-menu-logo {
+   @apply object-contain;
+}
+
+.mobile-menu-content {
+   @apply flex-1 flex flex-col justify-center items-center gap-6 text-[#1c3b23] text-4xl font-gopher;
+}
+
+.mobile-menu-link {
+   @apply hover:opacity-70;
+}
+
+/* --- TABLET SPECIFIC TWEAKS --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+   .nav-container {
+      @apply px-10;
+   }
+
+   .nav-links {
+      @apply gap-8;
+   }
+}
+
+@media (max-width: 768px) {
+   .nav-container {
+      @apply py-6;
+   }
+}

@@ -1,0 +1,160 @@
+/* =========================================
+   HOPE SECTION STYLES
+   ========================================= */
+
+/* --- Primary Section Container --- */
+.hope-section {
+    /* 
+       Centering the container on the page.
+       Background color matches the lilac theme from the reference.
+    */
+    @apply w-full bg-[#c2bfcb] flex justify-center;
+}
+
+.hope-container {
+    /* 
+       Flex layout:
+       - Stacks vertically on mobile.
+       - Side-by-side row on desktop (md+).
+    */
+    @apply w-full flex flex-col md:flex-row items-stretch overflow-hidden;
+}
+
+/* --- Visual Side (Left on Desktop) --- */
+.hope-image-wrapper {
+    /* Covers 50% of the width on desktop */
+    @apply relative w-full md:w-1/2 min-h-[500px] md:h-auto;
+}
+
+.hope-image {
+    /* Image content scaling and placement */
+    @apply object-cover;
+}
+
+/* --- Information Side (Right on Desktop) --- */
+.hope-content-side {
+    /* Matching background to ensure seamless look across the right half */
+    @apply w-full md:w-1/2 flex flex-col justify-between bg-[#c2bfcb];
+}
+
+.hope-content {
+    /* 
+       Layout and Alignment:
+       - Centered vertically in its half.
+       - Left-aligned text content.
+       - Responsive horizontal padding.
+    */
+    @apply flex flex-col justify-center items-start py-40 px-8 md:px-16 lg:px-14 pb-24 text-[#223614];
+    min-height: 600px;
+}
+
+.hope-text-content {
+    /* Optimal line length for readable text */
+    @apply max-w-[650px];
+}
+
+/* --- Typography System --- */
+.hope-title {
+    /* Large, impactful header with responsive sizes */
+    @apply font-gopher text-[44px] md:text-[52px] lg:text-[52px] font-normal mb-8 text-[#223614];
+    line-height: 60px;
+}
+
+.hope-title i {
+    /* Italic emphasize */
+    @apply italic;
+    font-style: italic;
+}
+
+.hope-intro {
+    /* Introductory paragraph style */
+    @apply font-gopher text-[20px] md:text-[20px] font-medium mb-10;
+}
+
+/* --- Bulleted List Styling --- */
+.hope-list {
+    /* Vertical stack with consistent gap */
+    @apply flex flex-col gap-3 list-none p-0 mb-16 ml-4;
+}
+
+.hope-list li {
+    /* Custom list items with align-start for multi-line bullets */
+    @apply font-gopher text-[18px] md:text-[20px] leading-relaxed flex items-start gap-3;
+}
+
+.hope-list li::before {
+    /* Custom bullet point character and styling */
+    content: "•";
+    @apply text-[#223614] text-[20px] leading-[1];
+    margin-top: 4px;
+}
+
+.hope-text {
+    /* Concluding body text */
+    @apply font-gopher text-[18px] md:text-[20px] leading-relaxed opacity-90 text-[#223614];
+}
+
+/* --- Footer Area (Divider & CTA Button) --- */
+.hope-footer {
+    /* Separated from main text via mt-auto */
+    @apply w-full flex flex-col items-center mt-auto;
+}
+
+.hope-divider {
+    /* Subtle horizontal separation line */
+    @apply w-full h-[3px] bg-[#223614] opacity-30;
+}
+
+.hope-button-wrapper {
+    /* Centered button container with vertical padding */
+    @apply w-full flex justify-center py-5 transition-colors duration-300;
+}
+
+.hope-button-wrapper:hover {
+    background-color: #223614;
+    cursor: pointer;
+}
+
+.hope-button {
+    /* High-contrast, bold uppercase text with letter-spacing */
+    @apply font-gopher text-[14px] md:text-[14px] font-bold uppercase tracking-[-0.2px] text-[#223614] transition-colors duration-300;
+}
+
+.hope-button-wrapper:hover .hope-button {
+    color: #f8f3ed;
+}
+
+/* ---------------------------------
+   RESPONSIVE TABLET ADJUSTMENTS
+   ----------------------------------*/
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hope-content {
+        @apply py-20 px-10;
+    }
+
+    .hope-title {
+        @apply text-[44px];
+    }
+
+    .hope-intro,
+    .hope-list li,
+    .hope-text {
+        @apply text-[18px];
+    }
+}
+
+/* ---------------------------------
+   RESPONSIVE MOBILE ADJUSTMENTS
+   ----------------------------------*/
+@media (max-width: 768px) {
+    .hope-content {
+        /* Reduced padding for smaller screens */
+        @apply py-12 px-6;
+        min-height: auto;
+    }
+
+    .hope-title {
+        /* Downscaled header for mobile viewports */
+        @apply text-[40px];
+    }
+}

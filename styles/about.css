@@ -1,0 +1,66 @@
+/* =========================================
+   ABOUT SECTION STYLES
+   ========================================= */
+
+.about-main {
+    @apply min-h-screen bg-[#e7dfd7] flex items-center justify-center overflow-hidden;
+}
+
+.about-section {
+    @apply max-w-[1300px] w-full grid grid-cols-1 md:grid-cols-2 gap-2 pt-[65px] pb-[8px] md:py-20 mb-20 px-6 md:px-0;
+}
+
+.about-image-container {
+    @apply relative flex items-center justify-center mb-16 md:mb-0 md:order-2;
+}
+
+.about-arch {
+    @apply w-[179px] sm:w-[380px] md:w-[460px] lg:w-[436px] rounded-t-full overflow-hidden;
+}
+
+.about-circle-overlay {
+    @apply absolute -bottom-[-5px] md:-bottom-16 -right-[-55px] md:-right-10 w-[120px] sm:w-[180px] md:w-[230px] lg:w-[321px] aspect-square;
+}
+
+.about-content {
+    @apply flex flex-col justify-center font-gopher text-left items-start md:order-1;
+}
+
+.about-title {
+    @apply text-[#223614] font-medium leading-[1.1] text-[40px] md:text-[52px] mb-8;
+}
+
+.about-text {
+    @apply text-[#223614] text-[18px] md:text-[19.5px] leading-[1.6] max-w-[638px] mb-12;
+}
+
+.about-button-container {
+    @apply flex justify-center w-full md:w-auto mt-[40px];
+}
+
+.about-button {
+    @apply border border-[#223614] text-[#1c3b23] px-7 py-3 text-[16px] font-medium font-gopher hover:bg-[#223614] hover:text-white transition-all;
+}
+
+/* --- TABLET SPECIFIC TWEAKS --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .about-section {
+        @apply px-20 gap-x-5 md:py-10 mb-10;
+    }
+
+    .about-main {
+        @apply min-h-[65vh];
+    }
+
+    .about-arch {
+        @apply w-[350px];
+    }
+
+    .about-title {
+        @apply text-[44px];
+    }
+
+    .about-text {
+        @apply text-[18px];
+    }
+}

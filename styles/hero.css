@@ -1,0 +1,103 @@
+/* =========================================
+   HERO SECTION STYLES
+   ========================================= */
+
+/* --- Primary Hero Container --- */
+.hero-section {
+  /* 
+     Base styles:
+     - Minimum height of screen to ensure full coverage.
+     - Centered flex layout.
+     - Background color matches theme constants.
+  */
+  @apply w-full bg-[#f8f3ed] min-h-screen flex items-center justify-center;
+
+  /* 
+     Mobile Responsiveness:
+     - Stack items vertically on small screens.
+     - Switch to horizontal row on desktop (md breakpoint).
+  */
+  @apply flex-col md:flex-row;
+
+  /* 
+     Dynamic Spacing:
+     - Adaptive padding based on screen size (fixed vs vw).
+     - Responsive gaps between image and text.
+  */
+  @apply px-[3.25vw] pt-[80px] pb-[120px] md:pt-28 md:pb-0 gap-[45px] md:gap-24;
+}
+
+/* --- Visual Assets (Image) --- */
+.hero-image-wrapper {
+  /* 
+     Mobile Dimensions: 
+     Specific aspect ratio (179x269) for a curated look.
+  */
+  @apply relative w-[179px] h-[269px];
+
+  /* 
+     Desktop Scale:
+     Expands significantly on larger screens while maintaining constraints.
+  */
+  @apply md:w-full md:max-w-[574px] md:h-[861px];
+
+  /* 
+     Aesthetic Styling:
+     - Arch effect via rounded top.
+     - Centered on mobile via mx-auto.
+  */
+  @apply rounded-t-full overflow-hidden shrink-0 mx-auto;
+}
+
+.hero-image {
+  /* Ensure image fills the wrapper without distortion */
+  @apply object-cover;
+}
+
+/* --- Hero Messaging (Text) --- */
+.hero-content {
+  /* Clean, centered alignment for primary messaging */
+  @apply flex flex-col items-center text-center;
+
+  /* Constrain width for optimal line length and readability */
+  @apply w-full md:max-w-[697px];
+}
+
+/* --- Typography System --- */
+.hero-title {
+  /* Large, impactful header with theme color */
+  @apply font-gopher font-medium text-[#1c3b23] leading-[1];
+
+  /* Scale font size from mobile to desktop */
+  @apply text-[51px] md:text-[80px];
+}
+
+.hero-subtitle {
+  /* Secondary text with subtle margin from title */
+  @apply mt-8 text-[#1c3b23] text-[18px] md:text-[20px] font-gopher;
+}
+
+/* --- Interactive Elements (Buttons) --- */
+.hero-button {
+  @apply mt-12 px-10 py-4 inline-block;
+
+  /* Uppercase tracking for a modern button feel */
+  @apply text-[14px] tracking-[-0.2px] font-medium uppercase;
+
+  /* Clean outline border style */
+  @apply border border-forest text-forest;
+
+  /* Feedback transition for hover interaction */
+  @apply transition-colors duration-300 hover:bg-forest hover:text-white;
+}
+
+/* --- TABLET SPECIFIC TWEAKS --- */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-title {
+    @apply text-[64px];
+  }
+
+  .hero-image-wrapper {
+    @apply max-w-[450px] h-[675px];
+  }
+}
