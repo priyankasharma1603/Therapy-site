@@ -66,7 +66,7 @@
 /* --- Typography System --- */
 .hero-title {
   /* Large, impactful header with theme color */
-  @apply font-gopher font-medium text-[#1c3b23] leading-[1];
+  @apply font-gopher font-medium text-[#1c3b23] leading-[1] mt-0 md:mt-[-120px] text-center;
 
   /* Scale font size from mobile to desktop */
   @apply text-[51px] md:text-[80px];

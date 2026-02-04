@@ -42,15 +42,15 @@ export default function AboutPage() {
 
                     <FadeIn delay={400}>
                         <p className="about-text">
-                            I\'m committed to providing a safe and supportive environment where we can explore
-                            your thoughts, feelings, and behaviors. With empathy and guidance, we\'ll work together
+                            I'm committed to providing a safe and supportive environment where we can explore
+                            your thoughts, feelings, and behaviors. With empathy and guidance, we'll work together
                             to navigate the challenges life throws your way.
                         </p>
                     </FadeIn>
 
                     <FadeIn delay={600} className="about-button-container">
                         <button className="about-button">
-                            LET\'S CHAT →
+                            LET'S CHAT →
                         </button>
                     </FadeIn>
                 </div>
@@ -59,3 +59,4 @@ export default function AboutPage() {
         </main>
     );
 }
+
