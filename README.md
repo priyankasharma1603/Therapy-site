@@ -9,11 +9,12 @@ This project was created as part of the **Grow My Therapy Internship Assignment 
 
 ## 📌 Live Demo
 
-🔗 _Add your deployed site link here (e.g., Vercel, Netlify)_
+🔗 https://therapy-site-henna.vercel.app/maya-homepage
+
 
 ```
 
-[https://your-project-url.vercel.app](https://your-project-url.vercel.app)
+https://therapy-site-henna.vercel.app/
 
 ```
 
@@ -146,6 +147,7 @@ Then update paths inside components where necessary.
 
    ```
    http://localhost:3000
+   http://localhost:3000/maya-homepage
    ```
 
 ---
@@ -206,5 +208,3 @@ GitHub: [https://github.com/priyankasharma1603](https://github.com/priyankasharm
 Email: *YOUR_EMAIL_HERE*
 
 ---
-
-If you want, I can also generate a **README screenshot preview with badges**, or add **license details** (MIT, ISC, etc.).
