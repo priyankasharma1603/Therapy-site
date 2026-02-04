@@ -72,7 +72,7 @@ therapy-site/
 │   ├── page.tsx
 │   └── maya-homepage/
 │       └── page.tsx
-├─ components/
+├─ components/maya-sections/
 │   ├── Navbar.tsx
 │   ├── Hero.tsx
 │   ├── About.tsx
@@ -205,6 +205,7 @@ It can be extended with pages like Blog, Contact, Appointment Form, or Patient F
 
 Built by **Priyanka Sharma**
 GitHub: [https://github.com/priyankasharma1603](https://github.com/priyankasharma1603)
-Email: *YOUR_EMAIL_HERE*
+Email: psgeeta16@gmail.com
+
 
 ---
